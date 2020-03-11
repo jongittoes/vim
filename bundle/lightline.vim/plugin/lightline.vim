@@ -31,3 +31,13 @@ let g:qf_disable_statusline = 1
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
